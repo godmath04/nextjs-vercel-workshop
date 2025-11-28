@@ -18,7 +18,7 @@ const HeaderClient = ({ user }: HeaderClientProps) => {
 
   const handleLogout = () => {
     setDropdownOpen(false);
-    signOut();
+    signOut({ callbackUrl: "/api/auth/signin" });
   };
 
   return (
